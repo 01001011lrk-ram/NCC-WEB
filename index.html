@@ -1,0 +1,1695 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="NCC Digital Hub — a modern information and resource platform for National Cadet Corps cadets, students, parents, teachers and visitors.">
+  <meta name="theme-color" content="#F7F8F3">
+  <title>NCC Digital Hub | National Cadet Corps</title>
+
+  <!-- Apply the saved / system theme BEFORE first paint (prevents flicker) -->
+  <script>
+    (function () {
+      var theme = null;
+      try { theme = localStorage.getItem('ncc-theme'); } catch (e) {}
+      if (theme !== 'light' && theme !== 'dark') {
+        theme = (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) ? 'dark' : 'light';
+      }
+      document.documentElement.setAttribute('data-theme', theme);
+    })();
+  </script>
+
+  <link rel="preconnect" href="https://images.unsplash.com">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@500;600;700&family=DM+Sans:wght@400;500;600;700&display=swap">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <header class="site-header" id="top">
+    <nav class="nav container" aria-label="Primary navigation">
+      <a class="brand" href="#home" aria-label="NCC Digital Hub home">
+        <span class="brand-crest">
+          <img src="assets/ncc-logo.png.png" alt="National Cadet Corps emblem">
+        </span>
+        <span>
+          <strong>NCC Digital Hub</strong>
+          <small>Unity • Discipline • Service</small>
+        </span>
+      </a>
+
+      <div class="nav-right">
+        <div class="nav-links" id="nav-links">
+          <a class="active" href="#home">Home</a>
+          
+          <a href="#about">About</a>
+          <a href="#resources">Resources</a>
+          <a href="#achievements">Achievements</a>
+          <a href="#camps">Camps</a>
+          <a href="#videos">Videos</a>
+          <a href="#gallery">Gallery</a>
+          <a href="#contact">Contact</a>
+        </div>
+
+        <div class="nav-actions">
+          <button class="theme-toggle" id="theme-toggle" type="button" title="Light Mode / Dark Mode" aria-label="Switch to dark mode">
+            <!-- Moon (shown in light mode) -->
+            <svg class="icon-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8z"/></svg>
+            <!-- Sun (shown in dark mode) -->
+            <svg class="icon-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M4.93 19.07l1.41-1.41M17.66 6.34l1.41-1.41"/></svg>
+          </button>
+          <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="nav-links" aria-label="Open navigation">
+            <span></span><span></span><span></span>
+          </button>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <main id="main">
+    <section class="hero section" id="home">
+      <div class="hero-media" aria-hidden="true"></div>
+      <div class="hero-grid container">
+        <div class="hero-copy reveal">
+          <div class="hero-kicker"><span class="kicker-line"></span><span>National Cadet Corps · Digital Platform</span></div>
+          <h1>Built for<br><span>discipline.</span><br>Driven by service.</h1>
+          <p class="hero-text">A focused digital platform for cadets, families, educators and visitors — bringing training, camps, resources, achievements and stories together in one place.</p>
+          <div class="hero-actions">
+            <a class="btn btn-primary" href="#about">Explore NCC <span>↗</span></a>
+            <a class="btn btn-quiet" href="#resources">Browse resources</a>
+          </div>
+          <div class="hero-proof">
+            <div><strong>UNITY</strong><span>One team</span></div>
+            <i></i>
+            <div><strong>DISCIPLINE</strong><span>Daily practice</span></div>
+            <i></i>
+            <div><strong>SERVICE</strong><span>Purpose in action</span></div>
+          </div>
+        </div>
+
+        <aside class="hero-panel reveal delay-1" aria-label="NCC field note">
+          <div class="panel-index">FIELD NOTE <span>01</span></div>
+          <div class="panel-seal"><span>NCC</span><small>CADET<br>FIRST</small></div>
+          <p class="panel-label">The cadet journey</p>
+          <h2>Learn the standard.<br><em>Raise the standard.</em></h2>
+          <div class="panel-rule"></div>
+          <div class="panel-meta"><span>Training</span><span>Leadership</span><span>Community</span></div>
+        </aside>
+      </div>
+      <div class="hero-bottom container">
+        <span>01 — INTRODUCTION</span>
+        <a href="#about" aria-label="Scroll to about section">Scroll to discover <b>↓</b></a>
+      </div>
+    </section>
+
+    <section class="stats-strip">
+      <div class="container stats-grid">
+        <div class="stat"><span class="stat-no">01</span><strong>13.5L+</strong><span>Cadets across India</span></div>
+        <div class="stat"><span class="stat-no">02</span><strong><a href="#wings" class="stat-button"><button>03</button></a></strong><span><h3>Service wings</h3></span></div>
+        <div class="stat"><span class="stat-no">03</span><span> <strong><a href="#camps" class="stat-button"><button>24+</button></a>
+    </strong><h3>Major camp formats</h3></span></div>
+        <div class="stat"><span class="stat-no">04</span><strong><a href="#about" class="stat-button"><button>1948</button></a>
+    </strong>
+<span><h3>Year NCC was established</h3></span></div>
+      </div>
+    </section>
+
+
+<!-- ==============================
+     ABOUT NCC — COMPLETE SECTION
+================================== -->
+<section class="section intro ncc-about" id="about">
+  <div class="container">
+
+    <!-- 1. Introduction -->
+    <div class="section-heading split reveal">
+      <div>
+        <p class="eyebrow">01 / About NCC</p>
+        <h2>Character is built<br><em>one challenge at a time.</em></h2>
+      </div>
+      <p>
+        The National Cadet Corps (NCC) is India's voluntary youth
+        organisation associated with the Armed Forces and functioning
+        under the Ministry of Defence. It helps young people develop
+        discipline, leadership, teamwork, confidence and a spirit of
+        service through training, camps and community activities.
+      </p>
+    </div>
+
+    <!-- 2. Key facts -->
+    <div class="ncc-facts">
+      <article class="ncc-info-card">
+        <span class="ncc-icon">✦</span>
+        <span class="ncc-label">FULL FORM</span>
+        <h3>National Cadet Corps</h3>
+        <p>A youth development organisation promoting unity and discipline.</p>
+      </article>
+
+      <article class="ncc-info-card">
+        <span class="ncc-icon">▦</span>
+        <span class="ncc-label">ESTABLISHED</span>
+        <h3>15 July 1948</h3>
+        <p>Established under the National Cadet Corps Act, 1948.</p>
+      </article>
+
+      <article class="ncc-info-card">
+        <span class="ncc-icon">⌖</span>
+        <span class="ncc-label">HEADQUARTERS</span>
+        <h3>New Delhi</h3>
+        <p>NCC Directorate General headquarters, India.</p>
+      </article>
+
+      <article class="ncc-info-card">
+        <span class="ncc-icon">★</span>
+        <span class="ncc-label">OFFICIAL MOTTO</span>
+        <h3>Unity and Discipline</h3>
+        <p>Ekta aur Anushasan.</p>
+      </article>
+    </div>
+
+    <!-- 3. Vision, mission and values -->
+    <div class="ncc-subheading">
+      <p class="eyebrow">THE NCC FRAMEWORK</p>
+      <h2>Vision. Mission. <em>Values.</em></h2>
+    </div>
+
+    <div class="about-grid ncc-framework">
+      <article class="about-feature reveal">
+        <div class="number">01</div>
+        <h3>Vision</h3>
+        <p>
+          Empower young people with character, confidence, discipline,
+          leadership and a commitment to nation-building.
+        </p>
+      </article>
+
+      <article class="about-feature dark reveal">
+        <div class="number">02</div>
+        <h3>Mission</h3>
+        <p>
+          Develop organised, trained and motivated youth who can
+          provide leadership and contribute positively to society.
+        </p>
+      </article>
+
+      <article class="about-feature accent reveal">
+        <div class="number">03</div>
+        <h3>Values</h3>
+        <p>
+          Unity, discipline, comradeship, secular outlook, respect,
+          teamwork, responsibility and selfless service.
+        </p>
+      </article>
+    </div>
+
+    <!-- 4. History -->
+    <div class="ncc-subheading">
+      <p class="eyebrow">A LEGACY OF SERVICE</p>
+      <h2>History of <em>NCC</em></h2>
+      <p class="ncc-section-intro">
+        From its establishment in 1948, NCC has continued to support
+        youth development and national integration.
+      </p>
+    </div>
+
+    <div class="ncc-timeline">
+      <article class="ncc-timeline-item">
+        <span class="ncc-year">1948</span>
+        <div>
+          <h3>NCC is established</h3>
+          <p>
+            The National Cadet Corps came into existence on
+            15 July 1948 under the NCC Act, 1948.
+          </p>
+        </div>
+      </article>
+
+      <article class="ncc-timeline-item">
+        <span class="ncc-year">1949</span>
+        <div>
+          <h3>Girls join the organisation</h3>
+          <p>
+            The Girls Division was introduced, expanding participation
+            in NCC training.
+          </p>
+        </div>
+      </article>
+
+      <article class="ncc-timeline-item">
+        <span class="ncc-year">1980</span>
+        <div>
+          <h3>Motto adopted</h3>
+          <p>
+            “Unity and Discipline” became the official NCC motto.
+          </p>
+        </div>
+      </article>
+
+      <article class="ncc-timeline-item">
+        <span class="ncc-year">TODAY</span>
+        <div>
+          <h3>Training for tomorrow</h3>
+          <p>
+            NCC provides opportunities for leadership, adventure,
+            national integration and community service.
+          </p>
+        </div>
+      </article>
+    </div>
+
+    <!-- 5. Aims and objectives -->
+    <div class="ncc-subheading">
+      <p class="eyebrow">WHAT NCC DEVELOPS</p>
+      <h2>Aims and <em>Objectives</em></h2>
+    </div>
+
+    <div class="ncc-card-grid">
+      <article class="ncc-detail-card">
+        <span class="ncc-icon">✦</span>
+        <h3>Character</h3>
+        <p>Build integrity, responsibility, confidence and good conduct.</p>
+      </article>
+
+      <article class="ncc-detail-card">
+        <span class="ncc-icon">✓</span>
+        <h3>Discipline</h3>
+        <p>Practise punctuality, self-control, commitment and respect.</p>
+      </article>
+
+      <article class="ncc-detail-card">
+        <span class="ncc-icon">♟</span>
+        <h3>Leadership</h3>
+        <p>Develop initiative, decision-making and leadership by example.</p>
+      </article>
+
+      <article class="ncc-detail-card">
+        <span class="ncc-icon">◎</span>
+        <h3>Comradeship</h3>
+        <p>Encourage friendship, teamwork and mutual respect.</p>
+      </article>
+
+      <article class="ncc-detail-card">
+        <span class="ncc-icon">⌂</span>
+        <h3>National Integration</h3>
+        <p>Respect India's cultural, linguistic and regional diversity.</p>
+      </article>
+
+      <article class="ncc-detail-card">
+        <span class="ncc-icon">↗</span>
+        <h3>Adventure</h3>
+        <p>Build courage, resilience, fitness and sportsmanship.</p>
+      </article>
+
+      <article class="ncc-detail-card">
+        <span class="ncc-icon">♡</span>
+        <h3>Selfless Service</h3>
+        <p>Support communities and contribute to nation-building.</p>
+      </article>
+
+      <article class="ncc-detail-card">
+        <span class="ncc-icon">★</span>
+        <h3>Social Responsibility</h3>
+        <p>Prepare young people to contribute responsibly in different fields.</p>
+      </article>
+    </div>
+
+    <!-- 6. Divisions -->
+    <div class="ncc-subheading">
+      <p class="eyebrow">WHO CAN PARTICIPATE?</p>
+      <h2>NCC Divisions</h2>
+    </div>
+
+    <div class="ncc-two-column">
+      <article class="ncc-detail-card">
+        <span class="ncc-label">SCHOOL LEVEL</span>
+        <h3>Junior Division / Junior Wing</h3>
+        <p>
+          Intended for eligible school students. Training and enrolment
+          depend on the applicable rules and participating institution.
+        </p>
+      </article>
+
+      <article class="ncc-detail-card">
+        <span class="ncc-label">COLLEGE LEVEL</span>
+        <h3>Senior Division / Senior Wing</h3>
+        <p>
+          Intended for eligible college and university students.
+          Cadets can undertake further training and participate in
+          authorised camps and activities.
+        </p>
+      </article>
+    </div>
+
+    <!-- 7. Service wings -->
+    <div class="ncc-subheading">
+      <p class="eyebrow">THREE SERVICES · ONE PURPOSE</p>
+      <h2>The Three <em>Wings</em></h2>
+    </div>
+
+    <div class="ncc-wing-grid">
+      <article class="ncc-wing-card ncc-army">
+        <span class="ncc-wing-number">01 / ARMY</span>
+        <h3>Army Wing</h3>
+        <p>Ground training, field skills and leadership.</p>
+        <ul>
+          <li>Drill and parade</li>
+          <li>Field craft and battle craft</li>
+          <li>Map reading and navigation</li>
+          <li>Physical fitness and obstacle training</li>
+          <li>Teamwork and leadership</li>
+        </ul>
+      </article>
+
+      <article class="ncc-wing-card ncc-navy">
+        <span class="ncc-wing-number">02 / NAVAL</span>
+        <h3>Naval Wing</h3>
+        <p>Maritime knowledge and practical water-based skills.</p>
+        <ul>
+          <li>Seamanship</li>
+          <li>Boat pulling and sailing</li>
+          <li>Navigation and naval knowledge</li>
+          <li>Water safety</li>
+          <li>Water sports where available</li>
+        </ul>
+      </article>
+
+      <article class="ncc-wing-card ncc-air">
+        <span class="ncc-wing-number">03 / AIR</span>
+        <h3>Air Wing</h3>
+        <p>Aviation awareness and air-related training.</p>
+        <ul>
+          <li>Aviation and aerospace awareness</li>
+          <li>Aero-modelling</li>
+          <li>Gliding or flying-related training where available</li>
+          <li>Air Force orientation</li>
+          <li>Technical learning and teamwork</li>
+        </ul>
+      </article>
+    </div>
+
+    <!-- 8. Training -->
+    <div class="ncc-subheading">
+      <p class="eyebrow">LEARN BY DOING</p>
+      <h2>NCC Training <em>Programmes</em></h2>
+    </div>
+
+    <div class="ncc-card-grid">
+      <article class="ncc-detail-card">
+        <h3>Institutional Training</h3>
+        <p>
+          Drill, parade, physical training, leadership, map reading,
+          first aid, service subjects and social awareness.
+        </p>
+      </article>
+
+      <article class="ncc-detail-card">
+        <h3>Camp Training</h3>
+        <p>
+          Structured camps offer opportunities to practise skills,
+          build teamwork and interact with cadets from other units.
+        </p>
+      </article>
+
+      <article class="ncc-detail-card">
+        <h3>Community Service</h3>
+        <p>
+          Activities may include cleanliness drives, tree planting,
+          environmental awareness and supervised community support.
+        </p>
+      </article>
+
+      <article class="ncc-detail-card">
+        <h3>Adventure Training</h3>
+        <p>
+          Authorised activities may include trekking, mountaineering,
+          rock climbing, sailing and other adventure programmes.
+        </p>
+      </article>
+    </div>
+
+    <!-- 9. Camps -->
+    <div class="ncc-subheading">
+      <p class="eyebrow">TRAINING BEYOND THE UNIT</p>
+      <h2>Important NCC <em>Camps</em></h2>
+      <p class="ncc-section-intro">
+        Camp availability, selection and duration vary by programme,
+        wing, unit and official instructions.
+      </p>
+    </div>
+
+    <div class="ncc-camp-grid">
+      <article class="ncc-camp-card">
+        <span>RDC</span>
+        <h3>Republic Day Camp</h3>
+        <p>A prestigious national-level camp associated with Republic Day events in New Delhi.</p>
+      </article>
+
+      <article class="ncc-camp-card">
+        <span>CATC</span>
+        <h3>Combined Annual Training Camp</h3>
+        <p>Structured training, drill, teamwork and camp activities.</p>
+      </article>
+
+      <article class="ncc-camp-card">
+        <span>TSC</span>
+        <h3>All India Thal Sainik Camp</h3>
+        <p>Army-oriented training and competitions for selected cadets.</p>
+      </article>
+
+      <article class="ncc-camp-card">
+        <span>AINSC</span>
+        <h3>All India Nau Sainik Camp</h3>
+        <p>Naval-oriented training and activities for selected cadets.</p>
+      </article>
+
+      <article class="ncc-camp-card">
+        <span>AIVSC</span>
+        <h3>All India Vayu Sainik Camp</h3>
+        <p>Air Wing training and competitions for eligible selected cadets.</p>
+      </article>
+
+      <article class="ncc-camp-card">
+        <span>SNIC</span>
+        <h3>Special National Integration Camp</h3>
+        <p>Encourages cultural exchange, friendship and national integration.</p>
+      </article>
+
+      <article class="ncc-camp-card">
+        <span>ALC</span>
+        <h3>Advance Leadership Camp</h3>
+        <p>Focuses on leadership, responsibility and advanced development.</p>
+      </article>
+
+      <article class="ncc-camp-card">
+        <span>EBSB</span>
+        <h3>Ek Bharat Shreshtha Bharat</h3>
+        <p>Promotes cultural understanding and unity among cadets.</p>
+      </article>
+
+      <article class="ncc-camp-card">
+        <span>YEP</span>
+        <h3>Youth Exchange Programme</h3>
+        <p>Provides selected cadets with opportunities for international exchange.</p>
+      </article>
+
+      <article class="ncc-camp-card">
+        <span>ATTACHMENT</span>
+        <h3>Service Attachment Camps</h3>
+        <p>May provide exposure to Army, Naval or Air Force environments.</p>
+      </article>
+
+      <article class="ncc-camp-card">
+        <span>ADVENTURE</span>
+        <h3>Trekking and Rock Climbing</h3>
+        <p>Develops endurance, confidence and safe adventure skills.</p>
+      </article>
+
+      <article class="ncc-camp-card">
+        <span>SAILING / AIR</span>
+        <h3>Specialised Camps</h3>
+        <p>May include sailing, yachting, gliding or flying-related activities where available.</p>
+      </article>
+    </div>
+
+    <p class="ncc-disclaimer">
+      Camp names, formats, selection and availability may change.
+      Check current official notices and confirm details with your NCC unit.
+    </p>
+
+    <!-- 10. Certificates -->
+    <div class="ncc-subheading">
+      <p class="eyebrow">RECOGNISING CADET ACHIEVEMENT</p>
+      <h2>NCC <em>Certificates</em></h2>
+    </div>
+
+    <div class="ncc-certificate-grid">
+      <article class="ncc-certificate-card">
+        <span class="ncc-certificate-mark">A</span>
+        <h3>Certificate A</h3>
+        <p>
+          Associated with eligible Junior Division / Junior Wing cadets,
+          subject to prescribed training and examination requirements.
+        </p>
+      </article>
+
+      <article class="ncc-certificate-card">
+        <span class="ncc-certificate-mark">B</span>
+        <h3>Certificate B</h3>
+        <p>
+          Associated with Senior Division / Senior Wing cadets who meet
+          the applicable training, attendance and examination conditions.
+        </p>
+      </article>
+
+      <article class="ncc-certificate-card">
+        <span class="ncc-certificate-mark">C</span>
+        <h3>Certificate C</h3>
+        <p>
+          The highest of the three commonly recognised NCC certificates,
+          subject to the prescribed eligibility and examination rules.
+        </p>
+      </article>
+    </div>
+
+    <div class="ncc-benefits">
+      <h3>How NCC can benefit you</h3>
+      <ul>
+        <li>Improves discipline, confidence and leadership.</li>
+        <li>Builds teamwork and communication skills.</li>
+        <li>Provides opportunities to participate in camps and competitions.</li>
+        <li>Encourages physical fitness and social responsibility.</li>
+        <li>May offer recruitment-related benefits where current official rules provide them.</li>
+      </ul>
+      <p>
+        NCC participation or a certificate does not guarantee admission,
+        employment or selection. Benefits depend on the applicable
+        recruitment notification and authority.
+      </p>
+    </div>
+
+    <!-- 11. Motto and values -->
+    <div class="ncc-motto">
+      <p class="eyebrow">THE NCC MOTTO</p>
+      <h2>UNITY <span>•</span> DISCIPLINE</h2>
+      <p><strong>Ekta aur Anushasan</strong></p>
+      <p>
+        The official NCC song is <strong>“Hum Sab Bharatiya Hain”.</strong>
+        Together, the motto and values represent unity, respect,
+        comradeship, responsibility and service to the nation.
+      </p>
+    </div>
+
+    <!-- 12. Cadet responsibilities -->
+    <div class="ncc-subheading">
+      <p class="eyebrow">THE CADET STANDARD</p>
+      <h2>Uniform and <em>Responsibilities</em></h2>
+    </div>
+
+    <div class="ncc-two-column">
+      <article class="ncc-detail-card">
+        <h3>Uniform and Appearance</h3>
+        <p>
+          Maintain a neat appearance and wear the uniform according
+          to the official rules and instructions of your NCC unit.
+        </p>
+      </article>
+
+      <article class="ncc-detail-card">
+        <h3>Responsible Cadet Conduct</h3>
+        <p>
+          Attend prescribed training, follow authorised instructions,
+          respect others, observe safety procedures and uphold NCC values.
+        </p>
+      </article>
+    </div>
+
+    <!-- 13. Links to other website sections -->
+    <div class="ncc-about-cta">
+      <div>
+        <p class="eyebrow">CONTINUE YOUR CADET JOURNEY</p>
+        <h2>Learn more. <em>Be prepared.</em></h2>
+        <p>Explore training resources and discover camp opportunities.</p>
+      </div>
+      <div class="ncc-cta-actions">
+        <a class="btn btn-primary" href="#resources">Explore Resources ↗</a>
+        <a class="btn btn-quiet" href="#camps">View Camps ↗</a>
+      </div>
+    </div>
+
+  </div>
+</section>
+<!-- END ABOUT NCC -->
+
+
+    <!-- ==============================
+         NCC IDENTITY & UNIFORM
+    ================================ -->
+    <section class="section identity-section" id="identity">
+      <div class="container identity-grid">
+
+        <div class="identity-visual">
+          <img src="assets/4.jpg" alt="NCC cadet uniform guide">
+          <div class="identity-caption">
+            <span>CADET STANDARD</span>
+            <strong>Uniform • Bearing • Discipline</strong>
+          </div>
+        </div>
+
+        <div class="identity-copy">
+          <p class="eyebrow">NCC Identity & Standards</p>
+
+          <h2>
+            Wear the uniform.<br>
+            <em>Carry the values.</em>
+          </h2>
+
+          <p class="identity-lead">
+            The NCC experience is built around disciplined
+            appearance, teamwork, training and service.
+          </p>
+
+          <div class="identity-points">
+            <div>
+              <span>01</span>
+              <div>
+                <h3>Uniform Standards</h3>
+                <p>Maintain the uniform neatly and wear it according to the instructions of your NCC unit.</p>
+              </div>
+            </div>
+
+            <div>
+              <span>02</span>
+              <div>
+                <h3>Three Service Wings</h3>
+                <p>Army, Naval and Air Wing cadets share the NCC spirit while receiving service-specific training.</p>
+              </div>
+            </div>
+
+            <div>
+              <span>03</span>
+              <div>
+                <h3>One Cadet Identity</h3>
+                <p>Unity, discipline, character and service remain at the centre of the cadet journey.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <section class="section dark-section" id="resources">
+      <div class="container">
+        <div class="section-heading split light reveal">
+          <div><p class="eyebrow">02 / Resource Library</p><h2>Learn. Train.<br><em>Be prepared.</em></h2></div>
+          <p>Find study notes, training references, guides and document templates in one organised library.</p>
+        </div>
+        <div class="resource-tools reveal">
+          <label class="search-box"><span>⌕</span><input id="resource-search" type="search" placeholder="Search resources..." aria-label="Search resources"></label>
+          <div class="filter-row" role="group" aria-label="Resource categories">
+            <button class="filter active" data-filter="all">All</button>
+            <button class="filter" data-filter="training">Training</button>
+            <button class="filter" data-filter="study">Study</button>
+            <button class="filter" data-filter="guides">Guides</button>
+            <button class="filter" data-filter="documents">Documents</button>
+          </div>
+        </div>
+        <div class="resource-grid" id="resource-grid">
+
+          <article class="resource-card" data-category="training" data-title="Drill and Parade Handbook">
+            <span class="card-tag">TRAINING</span>
+            <div class="resource-icon">✦
+              <img src="assets/Dronecover.jpg" alt="Drill and Parade Handbook cover" width="150"> 
+            </div>
+            <h3>DroneS </h3>
+            <p>Formation basics, commands, movement and parade preparation.</p>
+            <a href="assets/Drone.pdf" class="text-link" target="_blank" rel="noopener"><span>View guide →</span></a>
+          </article>
+
+          <article class="resource-card" data-category="study" data-title="Ot notes">
+            <span class="card-tag">TRAINING</span>
+            <div class="resource-icon">▤
+              <img src="assets/otcover.png" alt="NCC General Knowledge cover" width="250">
+            </div>
+            <h3>Obstacle Training</h3>
+            <p>Concise revision notes covering NCC history, organisation and terminology.</p>
+            <a href="assets/O T.pdf" class="text-link" target="_blank" rel="noopener"><span>View guide →</span></a>
+          </article>
+
+          <article class="resource-card" data-category="guides" data-title="FEILD CRAFT & BATTEL CRAFT">
+            <span class="card-tag">TRAINING</span>
+            <div class="resource-icon">✓
+              <img src="assets/drillcover.jpg" alt="Field Craft and Battle Craft cover" width="250">
+            </div>
+            <h3>DRILL</h3>
+            <p>A practical checklist for kit, documents, fitness and personal essentials.</p>
+            <a href="assets/DRILL.pdf" class="text-link" target="_blank" rel="noopener"><span>View guide →</span></a>
+          </article>
+
+                  <article class="resource-card" data-category="training" data-title="Drill and Parade Handbook">
+            <span class="card-tag">STUDY</span>
+            <div class="resource-icon">✦
+                                  <img src="assets/PersonalityDevelopmentcover.jpg" alt="Drill and Parade Handbook cover" width="300"> 
+            </div>
+            <h3>Personality Development</h3>
+            <p>Formation basics, commands, movement and parade preparation.</p>
+            <a href="assets/PersonalityDevelopment.pdf" class="text-link" target="_blank" rel="noopener"><span>View guide →</span></a>
+          </article>
+
+          <article class="resource-card" data-category="study" data-title="NCC General Knowledge Notes">
+            <span class="card-tag">STUDY</span>
+            <div class="resource-icon">▤
+              <img src="assets/gkcover.jpg" alt="NCC General Knowledge cover" width="180">
+            </div>
+            <h3>NCC General Knowledge</h3>
+            <p>Concise revision notes covering NCC history, organisation and terminology.</p>
+            <a href="assets/Map.pdf" class="text-link" target="_blank" rel="noopener"><span>View guide →</span></a>
+          </article>
+
+          <article class="resource-card" data-category="guides" data-title="FEILD CRAFT & BATTEL CRAFT">
+            <span class="card-tag">GUIDE</span>
+            <div class="resource-icon">✓
+              <img src="assets/fcbccover.jpg" alt="Field Craft and Battle Craft cover" width="125">
+            </div>
+            <h3>FEILD CRAFT & BATTEL CRAFT</h3>
+            <p>A practical checklist for kit, documents, fitness and personal essentials.</p>
+            <a href="assets/FCBC.pdf" class="text-link" target="_blank" rel="noopener"><span>View guide →</span></a>
+          </article>
+
+          <article class="resource-card" data-category="documents" data-title="MILTARY WEAPONS AND HISTORY">
+            <span class="card-tag">DOCUMENT</span>
+            <div class="resource-icon">◇
+              <img src="assets/MILITARYHISTORY.jpg" alt="Military Weapons and History cover" width="125">
+            </div>
+            <h3>MILTARY WEAPONS AND HISTORY</h3>
+            <p>Understand the broad pathway from basic training to certificate preparation.</p>
+            <a href="assets/Military.pdf" class="text-link" target="_blank" rel="noopener"><span>View guide →</span></a>
+          </article>
+
+          <article class="resource-card" data-category="training" data-title="Map Reading Essentials">
+            <span class="card-tag">TRAINING</span>
+            <div class="resource-icon">⌖
+              <img src="assets/mapcover.jpg" alt="Map Reading Essentials cover" width="180" onclick="openPDF1()" style="cursor:pointer">
+            </div>
+            <h3>Map Reading Essentials</h3>
+            <p>Introduction to map symbols, direction, scale and field navigation concepts.</p>
+            <a href="assets/Map.pdf" class="text-link" target="_blank" rel="noopener"><span>View guide →</span></a>
+          </article>
+
+          <article class="resource-card" data-category="guides" data-title="Health AND Hygine">
+            <span class="card-tag">GUIDE</span>
+            <div class="resource-icon">◎
+              <img src="assets/healthcover.jpg" alt="Health and Hygiene cover" width="125">
+            </div>
+            <h3>Health AND Hygine</h3>
+            <p>Plan safe, meaningful awareness drives, cleanliness activities and outreach.</p>
+            <a href="assets/Health.pdf" class="text-link" target="_blank" rel="noopener"><span>View guide →</span></a>
+          </article>
+
+        </div>
+        <div id="no-results" class="no-results" hidden>No resources match your search. Try another keyword or category.</div>
+      </div>
+    </section>
+
+
+
+<!-- ==============================
+     THREE WINGS OF NCC
+================================ -->
+<section class="section wings-section" id="wings">
+  <div class="container">
+
+    <div class="section-heading split reveal">
+      <div>
+        <p class="eyebrow">02 / NCC Service Wings</p>
+        <h2>Three wings.<br>
+          <em>One NCC spirit.</em>
+        </h2>
+      </div>
+      <p>
+        Explore the Army, Naval and Air Wings of the National Cadet
+        Corps. Each wing offers service-specific training while
+        developing discipline, leadership, teamwork and responsibility.
+      </p>
+    </div>
+
+    <div class="wings-grid">
+
+      <!-- ARMY WING -->
+      <article class="wing-card reveal">
+        <div class="wing-image">
+          <img
+            src="assets/ARmy.jpg"
+            alt="Army Wing cadets during training"
+            loading="lazy">
+          <span class="wing-number">01</span>
+        </div>
+
+        <div class="wing-content">
+          <p class="eyebrow">LAND • LEADERSHIP • COURAGE</p>
+          <h3>Army Wing</h3>
+          <p>
+            Focuses on drill, physical fitness, field craft,
+            map reading, teamwork and leadership.
+          </p>
+
+          <button class="btn btn-primary wing-button"
+                  type="button"
+                  aria-expanded="false"
+                  aria-controls="army-info"
+                  onclick="toggleWingInfo('army-info', this)">
+            Explore Army Wing <span>＋</span>
+          </button>
+
+          <div class="wing-details" id="army-info" hidden>
+            <h4>About Army Wing</h4>
+            <p>
+              Army Wing training introduces cadets to land-based
+              activities, discipline, outdoor skills and teamwork.
+              Training is conducted under the guidance of authorised
+              NCC instructors.
+            </p>
+            <h4>Training areas</h4>
+            <ul>
+              <li>Drill and parade practice</li>
+              <li>Physical training and obstacle activities</li>
+              <li>Map reading and field craft</li>
+              <li>Leadership, teamwork and community service</li>
+              <li>Army attachment and eligible NCC camps</li>
+            </ul>
+          </div>
+        </div>
+      </article>
+
+      <!-- NAVAL WING -->
+      <article class="wing-card reveal">
+        <div class="wing-image">
+          <img
+            src="assets/NAvy.jpg"
+            alt="Naval Wing cadets learning seamanship"
+            loading="lazy">
+          <span class="wing-number">02</span>
+        </div>
+
+        <div class="wing-content">
+          <p class="eyebrow">SEA • SEAMANSHIP • TEAMWORK</p>
+          <h3>Naval Wing</h3>
+          <p>
+            Introduces cadets to seamanship, navigation,
+            sailing, water safety and maritime awareness.
+          </p>
+
+          <button class="btn btn-primary wing-button"
+                  type="button"
+                  aria-expanded="false"
+                  aria-controls="naval-info"
+                  onclick="toggleWingInfo('naval-info', this)">
+            Explore Naval Wing <span>＋</span>
+          </button>
+
+          <div class="wing-details" id="naval-info" hidden>
+            <h4>About Naval Wing</h4>
+            <p>
+              Naval Wing training develops an understanding of
+              maritime activities, safe conduct around water,
+              teamwork and basic nautical skills. Practical
+              activities depend on facilities and unit arrangements.
+            </p>
+            <h4>Training areas</h4>
+            <ul>
+              <li>Basic seamanship and nautical terminology</li>
+              <li>Navigation fundamentals</li>
+              <li>Sailing and water safety, where available</li>
+              <li>Maritime awareness and teamwork</li>
+              <li>Sea attachment and eligible sailing camps</li>
+            </ul>
+          </div>
+        </div>
+      </article>
+
+      <!-- AIR WING -->
+      <article class="wing-card reveal">
+        <div class="wing-image">
+          <img
+            src="assets/AirForce.jpg"
+            alt="Air Wing cadets learning about aviation"
+            loading="lazy">
+          <span class="wing-number">03</span>
+        </div>
+
+        <div class="wing-content">
+          <p class="eyebrow">AIR • AVIATION • INNOVATION</p>
+          <h3>Air Wing</h3>
+          <p>
+            Develops aviation awareness through aerospace
+            learning, aeromodelling and eligible flying-related activities.
+          </p>
+
+          <button class="btn btn-primary wing-button"
+                  type="button"
+                  aria-expanded="false"
+                  aria-controls="air-info"
+                  onclick="toggleWingInfo('air-info', this)">
+            Explore Air Wing <span>＋</span>
+          </button>
+
+          <div class="wing-details" id="air-info" hidden>
+            <h4>About Air Wing</h4>
+            <p>
+              Air Wing introduces cadets to aviation, aerospace
+              concepts and air-force-related awareness. Practical
+              flying or gliding activities depend on availability,
+              permissions and eligibility.
+            </p>
+            <h4>Training areas</h4>
+            <ul>
+              <li>Basic aviation and aerospace knowledge</li>
+              <li>Aeromodelling and aircraft awareness</li>
+              <li>Air navigation fundamentals</li>
+              <li>Leadership, discipline and teamwork</li>
+              <li>Eligible air-force attachment and flying camps</li>
+            </ul>
+          </div>
+        </div>
+      </article>
+
+    </div>
+
+    <p class="wings-note">
+      Note: Activities, equipment and camp eligibility vary by NCC unit.
+      Follow instructions issued by your unit and authorised instructors.
+    </p>
+
+  </div>
+</section>
+
+<!-- =====================================
+     NCC ACHIEVEMENTS SECTION
+===================================== -->
+<section class="section ncc-achievements" id="achievements">
+  <div class="container">
+
+    <div class="achievement-hero">
+      <p class="eyebrow">NCC DIGITAL HUB / ACHIEVEMENTS</p>
+      <h2>Pride in Service,<br><em>Distinction in Achievement.</em></h2>
+      <p>
+        NCC cadets develop leadership, discipline and teamwork through
+        training, camps, competitions and community service. This section
+        celebrates their dedication and the opportunities NCC provides.
+      </p>
+    </div>
+
+    <!-- Achievement categories -->
+    <div class="achievement-highlights">
+      <article class="achievement-highlight">
+        <span class="achievement-symbol">🏆</span>
+        <h3>Competitions</h3>
+        <p>Drill, cultural events, sports and wing-specific competitions.</p>
+      </article>
+
+      <article class="achievement-highlight">
+        <span class="achievement-symbol">🎖️</span>
+        <h3>Recognition</h3>
+        <p>Certificates, medals, commendations and recognised performance.</p>
+      </article>
+
+      <article class="achievement-highlight">
+        <span class="achievement-symbol">🫡</span>
+        <h3>Leadership</h3>
+        <p>Responsibility, teamwork and leadership developed through training.</p>
+      </article>
+
+      <article class="achievement-highlight">
+        <span class="achievement-symbol">🤝</span>
+        <h3>Community Service</h3>
+        <p>Participation in approved awareness, environmental and service activities.</p>
+      </article>
+    </div>
+
+    <!-- Badge gallery -->
+    <div class="achievement-heading">
+      <div>
+        <p class="eyebrow">BADGES & RECOGNITION</p>
+        <h2>Celebrate Every <em>Milestone</em></h2>
+      </div>
+      <p>
+        Illustrative badge cards below describe achievement categories.
+        They are not representations of official NCC insignia or proof of an award.
+      </p>
+    </div>
+
+    <div class="achievement-badge-grid">
+
+      <article class="achievement-badge-card">
+        <div class="badge-art badge-general" aria-hidden="true">
+          <span>✦</span>
+          <strong>NCC</strong>
+          <small>CADET</small>
+        </div>
+        <span class="badge-category">CADET IDENTITY</span>
+        <h3>NCC Cadet</h3>
+        <p>Represents participation in the National Cadet Corps. Use an approved NCC emblem if displaying the official badge.</p>
+      </article>
+
+      <article class="achievement-badge-card">
+        <div class="badge-art badge-leadership" aria-hidden="true">
+          <span>★</span>
+          <strong>LEAD</strong>
+          <small>BY EXAMPLE</small>
+        </div>
+        <span class="badge-category">LEADERSHIP</span>
+        <h3>Leadership Achievement</h3>
+        <p>Recognise leadership, responsibility and teamwork demonstrated during authorised activities.</p>
+      </article>
+
+      <article class="achievement-badge-card">
+        <div class="badge-art badge-camp" aria-hidden="true">
+          <span>▲</span>
+          <strong>CAMP</strong>
+          <small>PARTICIPATION</small>
+        </div>
+        <span class="badge-category">CAMP EXPERIENCE</span>
+        <h3>Camp Participation</h3>
+        <p>Highlight participation in eligible training camps, subject to the camp's requirements.</p>
+      </article>
+
+      <article class="achievement-badge-card">
+        <div class="badge-art badge-service" aria-hidden="true">
+          <span>✚</span>
+          <strong>SERVE</strong>
+          <small>WITH PRIDE</small>
+        </div>
+        <span class="badge-category">COMMUNITY SERVICE</span>
+        <h3>Service Recognition</h3>
+        <p>Celebrate contributions to approved community, environmental and awareness activities.</p>
+      </article>
+
+      <article class="achievement-badge-card">
+        <div class="badge-art badge-excellence" aria-hidden="true">
+          <span>✹</span>
+          <strong>EXCEL</strong>
+          <small>WITH DISCIPLINE</small>
+        </div>
+        <span class="badge-category">PERSONAL DEVELOPMENT</span>
+        <h3>Excellence in Training</h3>
+        <p>Showcase verified achievements in training, fitness, drill or other authorised events.</p>
+      </article>
+
+      <article class="achievement-badge-card">
+        <div class="badge-art badge-unity" aria-hidden="true">
+          <span>◎</span>
+          <strong>UNITY</strong>
+          <small>IN DIVERSITY</small>
+        </div>
+        <span class="badge-category">NATIONAL INTEGRATION</span>
+        <h3>Unity and Comradeship</h3>
+        <p>Highlight teamwork, respect and cultural exchange among cadets.</p>
+      </article>
+
+    </div>
+
+    <!-- Camps and achievements -->
+    <div class="achievement-heading">
+      <div>
+        <p class="eyebrow">OPPORTUNITIES TO EXCEL</p>
+        <h2>Major NCC <em>Events & Camps</em></h2>
+      </div>
+    </div>
+
+    <div class="achievement-event-grid">
+      <article class="achievement-event-card">
+        <span class="event-number">01</span>
+        <h3>Republic Day Camp (RDC)</h3>
+        <p>
+          A prominent national-level NCC camp. Selection and participation
+          depend on applicable procedures and official instructions.
+        </p>
+      </article>
+
+      <article class="achievement-event-card">
+        <span class="event-number">02</span>
+        <h3>Thal Sainik Camp (TSC)</h3>
+        <p>
+          Army-oriented camp activities and competitions for eligible
+          selected cadets.
+        </p>
+      </article>
+
+      <article class="achievement-event-card">
+        <span class="event-number">03</span>
+        <h3>Nau Sainik Camp (AINSC)</h3>
+        <p>
+          Naval-oriented training and competitions for eligible
+          selected cadets.
+        </p>
+      </article>
+
+      <article class="achievement-event-card">
+        <span class="event-number">04</span>
+        <h3>Vayu Sainik Camp (AIVSC)</h3>
+        <p>
+          Air Wing activities and competitions for eligible
+          selected cadets.
+        </p>
+      </article>
+
+      <article class="achievement-event-card">
+        <span class="event-number">05</span>
+        <h3>National Integration Camps</h3>
+        <p>
+          Opportunities to develop cultural understanding, cooperation
+          and national unity.
+        </p>
+      </article>
+
+      <article class="achievement-event-card">
+        <span class="event-number">06</span>
+        <h3>Sports & Adventure</h3>
+        <p>
+          Opportunities may include sports, trekking, sailing,
+          rock climbing and other authorised activities.
+        </p>
+      </article>
+    </div>
+
+    <!-- Certificates -->
+    <div class="achievement-certificates">
+      <div>
+        <p class="eyebrow">RECOGNISING TRAINING</p>
+        <h2>NCC <em>Certificates</em></h2>
+        <p>
+          Certificates A, B and C recognise cadet training and achievement
+          under the applicable NCC requirements.
+        </p>
+      </div>
+
+      <div class="certificate-pills">
+        <span class="certificate-pill">Certificate A</span>
+        <span class="certificate-pill">Certificate B</span>
+        <span class="certificate-pill">Certificate C</span>
+      </div>
+    </div>
+
+    <!-- Real achievements can be added here -->
+    <div class="achievement-callout">
+      <div class="achievement-callout-icon" aria-hidden="true">★</div>
+      <div>
+        <p class="eyebrow">EVERY CADET HAS A STORY</p>
+        <h2>Small Steps Today,<br><em>Greater Leaders Tomorrow.</em></h2>
+        <p>
+          Add your unit's verified achievements, competition results,
+          camp photographs, cadet awards and certificates here.
+        </p>
+      </div>
+      <a class="btn btn-primary" href="#gallery">Explore Gallery ↗</a>
+    </div>
+
+    <p class="achievement-disclaimer">
+      Award names, eligibility and selection criteria can vary. Verify
+      all official awards and achievements before publishing. The
+      decorative badges on this page are illustrative designs only.
+    </p>
+
+  </div>
+</section>
+<!-- END NCC ACHIEVEMENTS -->
+
+    <section class="section camp-section" id="camps">
+      <div class="container">
+        <div class="section-heading split light reveal">
+          <div><p class="eyebrow">04 / Camp Details</p><h2>Step outside<br><em>your comfort zone.</em></h2></div>
+          <p>Use this sample camp dashboard as a clear template for publishing upcoming unit, group and national-level camp information.</p>
+        </div>
+        <div class="camp-card reveal">
+          <div class="camp-top"><span class="card-tag"><h3>AIR WING CAMPS</h3></span><span class="camp-status">● INFORMATION</span></div>
+         
+
+<div class="camp-body">
+            <div><h3>ALL INDIA VAYU SAINIK CAMP (AIVSC)</h3><p class="camp-location">📍 Unit training location • Andhra Pradesh</p></div>
+            <div class="camp-facts"><div><span>DATES</span><b>To be announced</b></div><div><span>DURATION</span><b>10 days</b></div><div><span>ELIGIBILITY</span><b>Enrolled cadets</b></div></div></div>
+
+ <div class="camp-body">
+            <div><h3>SPECIAL NATIONAL INTEGRATION CAMPS (SNICS)</h3><p class="camp-location">📍 Unit training location • Andhra Pradesh</p></div>
+            <div class="camp-facts"><div><span>DATES</span><b>To be announced</b></div><div><span>DURATION</span><b>10 days</b></div><div><span>ELIGIBILITY</span><b>Enrolled cadets</b></div></div>
+          </div>
+
+<div class="camp-body">
+            <div><h3>Republic Day Camp</h3><p class="camp-location">📍 Unit training location • DELHI</p></div>
+            <div class="camp-facts"><div><span>DATES</span><b>To be announced</b></div><div><span>DURATION</span><b>10 days</b></div><div><span>ELIGIBILITY</span><b>Enrolled cadets</b></div></div>
+          </div>
+
+<div class="camp-body">
+            <div><h3>ADVANCE LEADERSHIP CAMPS (ALC)</h3><p class="camp-location">📍 Unit training location • Andhra Pradesh</p></div>
+            <div class="camp-facts"><div><span>DATES</span><b>To be announced</b></div><div><span>DURATION</span><b>10 days</b></div><div><span>ELIGIBILITY</span><b>Enrolled cadets</b></div></div>
+          </div>
+
+
+<div class="camp-body">
+            <div><h3>ADVANCE LEADERSHIP CAMPS (ALC)</h3><p class="camp-location">📍 Unit training location • Andhra Pradesh</p></div>
+            <div class="camp-facts"><div><span>DATES</span><b>To be announced</b></div><div><span>DURATION</span><b>10 days</b></div><div><span>ELIGIBILITY</span><b>Enrolled cadets</b></div></div>
+          </div>
+
+
+
+<div class="camp-body">
+            <div><h3>AIR FORCE ATTACHMENT CAMP</h3><p class="camp-location">📍 Unit training location • Andhra Pradesh</p></div>
+            <div class="camp-facts"><div><span>DATES</span><b>To be announced</b></div><div><span>DURATION</span><b>10 days</b></div><div><span>ELIGIBILITY</span><b>Enrolled cadets</b></div></div>
+          </div>
+
+
+
+<div class="camp-body">
+            <div><h3>ROCK CLIMBING CAMP</h3><p class="camp-location">📍 Unit training location • Andhra Pradesh</p></div>
+            <div class="camp-facts"><div><span>DATES</span><b>To be announced</b></div><div><span>DURATION</span><b>10 days</b></div><div><span>ELIGIBILITY</span><b>Enrolled cadets</b></div></div>
+          </div>
+
+
+
+<div class="camp-body">
+            <div><h3>INTER-GROUP COMPETITION (IGC)</h3><p class="camp-location">📍 Unit training location • Andhra Pradesh</p></div>
+            <div class="camp-facts"><div><span>DATES</span><b>To be announced</b></div><div><span>DURATION</span><b>10 days</b></div><div><span>ELIGIBILITY</span><b>Enrolled cadets</b></div></div>
+          </div>
+
+<div class="camp-body">
+            <div><h3>GLIDING/FLYING TRAINING</h3><p class="camp-location">📍 Unit training location • Andhra Pradesh</p></div>
+            <div class="camp-facts"><div><span>DATES</span><b>To be announced</b></div><div><span>DURATION</span><b>10 days</b></div><div><span>ELIGIBILITY</span><b>Enrolled cadets</b></div></div>
+          </div>
+
+<div class="camp-body">
+            <div><h3>EK BHARAT SHRESHTHA BHARAT (EBSB) CAMP</h3><p class="camp-location">📍 Unit training location • Andhra Pradesh</p></div>
+            <div class="camp-facts"><div><span>DATES</span><b>To be announced</b></div><div><span>DURATION</span><b>10 days</b></div><div><span>ELIGIBILITY</span><b>Enrolled cadets</b></div></div>
+          </div>
+
+<div class="camp-body">
+            <div><h3>YOUTH EXCHANGE PROGRAMME (YEP)</h3><p class="camp-location">📍 Unit training location • DELHI</p></div>
+            <div class="camp-facts"><div><span>DATES</span><b>To be announced</b></div><div><span>DURATION</span><b>10 days</b></div><div><span>ELIGIBILITY</span><b>Enrolled cadets</b></div></div>
+          </div>
+
+
+<div class="camp-body">
+            <div><h3>Annual Training Camp</h3><p class="camp-location">📍 Unit training location • Andhra Pradesh</p></div>
+            <div class="camp-facts"><div><span>DATES</span><b>To be announced</b></div><div><span>DURATION</span><b>10 days</b></div><div><span>ELIGIBILITY</span><b>Enrolled cadets</b></div></div>
+          </div>
+
+
+
+          <div class="camp-bottom"><p><strong>Typical activities:</strong> Drill • Physical training • Map reading • First aid • Team tasks • Cultural programmes • Community service</p><button class="btn btn-light" data-modal="camp">View camp checklist →</button></div>
+        </div>
+         
+**                                                                            **
+ 
+
+        <div class="camp-card reveal">
+          <div class="camp-top"><span class="card-tag"><h3>ARMY WING CAMPS</h3></span><span class="camp-status">● INFORMATION</span></div>
+
+    
+
+
+<div>
+  
+
+
+<div class="camp-body">
+            <div><h3>SPECIAL NATIONAL INTEGRATION CAMPS (SNICS)</h3><p class="camp-location">📍 Unit training location • Andhra Pradesh</p></div>
+            <div class="camp-facts"><div><span>DATES</span><b>To be announced</b></div><div><span>DURATION</span><b>10 days</b></div><div><span>ELIGIBILITY</span><b>Enrolled cadets</b></div></div></div>
+
+ <div class="camp-body">
+            <div><h3>Youth Exchange Programe</h3><p class="camp-location">📍 Unit training location • Andhra Pradesh</p></div>
+            <div class="camp-facts"><div><span>DATES</span><b>To be announced</b></div><div><span>DURATION</span><b>10 days</b></div><div><span>ELIGIBILITY</span><b>Enrolled cadets</b></div></div>
+          </div>
+
+<div class="camp-body">
+            <div><h3>Republic Day Camp</h3><p class="camp-location">📍 Unit training location • DELHI</p></div>
+            <div class="camp-facts"><div><span>DATES</span><b>To be announced</b></div><div><span>DURATION</span><b>10 days</b></div><div><span>ELIGIBILITY</span><b>Enrolled cadets</b></div></div>
+          </div>
+
+<div class="camp-body">
+            <div><h3>Thal Sainik Camp</h3><p class="camp-location">📍 Unit training location • Andhra Pradesh</p></div>
+            <div class="camp-facts"><div><span>DATES</span><b>To be announced</b></div><div><span>DURATION</span><b>10 days</b></div><div><span>ELIGIBILITY</span><b>Enrolled cadets</b></div></div>
+          </div>
+
+
+<div class="camp-body">
+            <div><h3>ADVANCE LEADERSHIP CAMPS (ALC)</h3><p class="camp-location">📍 Unit training location • Andhra Pradesh</p></div>
+            <div class="camp-facts"><div><span>DATES</span><b>To be announced</b></div><div><span>DURATION</span><b>10 days</b></div><div><span>ELIGIBILITY</span><b>Enrolled cadets</b></div></div>
+          </div>
+
+
+
+<div class="camp-body">
+            <div><h3>ARMY ATTACHMENT CAMP (AAC)</h3><p class="camp-location">📍 Unit training location • Andhra Pradesh</p></div>
+            <div class="camp-facts"><div><span>DATES</span><b>To be announced</b></div><div><span>DURATION</span><b>10 days</b></div><div><span>ELIGIBILITY</span><b>Enrolled cadets</b></div></div>
+          </div>
+
+
+
+<div class="camp-body">
+            <div><h3>ROCK CLIMBING CAMP</h3><p class="camp-location">📍 Unit training location • Andhra Pradesh</p></div>
+            <div class="camp-facts"><div><span>DATES</span><b>To be announced</b></div><div><span>DURATION</span><b>10 days</b></div><div><span>ELIGIBILITY</span><b>Enrolled cadets</b></div></div>
+          </div>
+
+
+
+<div class="camp-body">
+            <div><h3>TREKKING CAMP</h3><p class="camp-location">📍 Unit training location • Andhra Pradesh</p></div>
+            <div class="camp-facts"><div><span>DATES</span><b>To be announced</b></div><div><span>DURATION</span><b>10 days</b></div><div><span>ELIGIBILITY</span><b>Enrolled cadets</b></div></div>
+          </div>
+
+<div class="camp-body">
+            <div><h3>PARA BASIC COURSE</h3><p class="camp-location">📍 Unit training location • Andhra Pradesh</p></div>
+            <div class="camp-facts"><div><span>DATES</span><b>To be announced</b></div><div><span>DURATION</span><b>10 days</b></div><div><span>ELIGIBILITY</span><b>Enrolled cadets</b></div></div>
+          </div>
+
+<div class="camp-body">
+            <div><h3>EK BHARAT SHRESHTHA BHARAT (EBSB) CAMP</h3><p class="camp-location">📍 Unit training location • Andhra Pradesh</p></div>
+            <div class="camp-facts"><div><span>DATES</span><b>To be announced</b></div><div><span>DURATION</span><b>10 days</b></div><div><span>ELIGIBILITY</span><b>Enrolled cadets</b></div></div>
+          </div>
+
+<div class="camp-body">
+            <div><h3>INTER-GROUP COMPETITION (IGC)</h3><p class="camp-location">📍 Unit training location • DELHI</p></div>
+            <div class="camp-facts"><div><span>DATES</span><b>To be announced</b></div><div><span>DURATION</span><b>10 days</b></div><div><span>ELIGIBILITY</span><b>Enrolled cadets</b></div></div>
+          </div>
+
+
+<div class="camp-body">
+            <div><h3>Annual Training Camp</h3><p class="camp-location">📍 Unit training location • Andhra Pradesh</p></div>
+            <div class="camp-facts"><div><span>DATES</span><b>To be announced</b></div><div><span>DURATION</span><b>10 days</b></div><div><span>ELIGIBILITY</span><b>Enrolled cadets</b></div></div>
+          </div></div>
+
+
+
+          <div class="camp-bottom"><p><strong>Typical activities:</strong> Drill • Physical training • Map reading • First aid • Team tasks • Cultural programmes • Community service</p><button class="btn btn-light" data-modal="camp">View camp checklist →</button></div>
+        </div>
+
+**              **
+
+
+
+
+        <div class="camp-card reveal">
+          <div class="camp-top"><span class="card-tag"><h3>NAVY WING CAMPS</h3></span><span class="camp-status">● INFORMATION</span></div>
+
+    
+
+
+<div>
+  
+
+
+<div class="camp-body">
+            <div><h3>ALL INDIA NAU SAINIK CAMP (AINSC)</h3><p class="camp-location">📍 Unit training location • Andhra Pradesh</p></div>
+            <div class="camp-facts"><div><span>DATES</span><b>To be announced</b></div><div><span>DURATION</span><b>10 days</b></div><div><span>ELIGIBILITY</span><b>Enrolled cadets</b></div></div></div>
+
+ <div class="camp-body">
+            <div><h3>REPUBLIC DAY CAMP (RDC)</h3><p class="camp-location">📍 Unit training location • Andhra Pradesh</p></div>
+            <div class="camp-facts"><div><span>DATES</span><b>To be announced</b></div><div><span>DURATION</span><b>10 days</b></div><div><span>ELIGIBILITY</span><b>Enrolled cadets</b></div></div>
+          </div>
+
+<div class="camp-body">
+            <div><h3>SPECIAL NATIONAL INTEGRATION CAMPS (SNICS)</h3><p class="camp-location">📍 Unit training location • DELHI</p></div>
+            <div class="camp-facts"><div><span>DATES</span><b>To be announced</b></div><div><span>DURATION</span><b>10 days</b></div><div><span>ELIGIBILITY</span><b>Enrolled cadets</b></div></div>
+          </div>
+
+<div class="camp-body">
+            <div><h3>ADVANCE LEADERSHIP CAMPS (ALC)</h3><p class="camp-location">📍 Unit training location • Andhra Pradesh</p></div>
+            <div class="camp-facts"><div><span>DATES</span><b>To be announced</b></div><div><span>DURATION</span><b>10 days</b></div><div><span>ELIGIBILITY</span><b>Enrolled cadets</b></div></div>
+          </div>
+
+
+<div class="camp-body">
+            <div><h3>SEA ATTACHMENT CAMP</h3><p class="camp-location">📍 Unit training location • Andhra Pradesh</p></div>
+            <div class="camp-facts"><div><span>DATES</span><b>To be announced</b></div><div><span>DURATION</span><b>10 days</b></div><div><span>ELIGIBILITY</span><b>Enrolled cadets</b></div></div>
+          </div>
+
+
+
+<div class="camp-body">
+            <div><h3>ALL INDIA YACHTING / SAILING CAMP</h3><p class="camp-location">📍 Unit training location • Andhra Pradesh</p></div>
+            <div class="camp-facts"><div><span>DATES</span><b>To be announced</b></div><div><span>DURATION</span><b>10 days</b></div><div><span>ELIGIBILITY</span><b>Enrolled cadets</b></div></div>
+          </div>
+
+
+
+<div class="camp-body">
+            <div><h3>ROCK LIMBING CAMP</h3><p class="camp-location">📍 Unit training location • Andhra Pradesh</p></div>
+            <div class="camp-facts"><div><span>DATES</span><b>To be announced</b></div><div><span>DURATION</span><b>10 days</b></div><div><span>ELIGIBILITY</span><b>Enrolled cadets</b></div></div>
+          </div>
+
+
+
+<div class="camp-body">
+            <div><h3>TREKKING CAMP</h3><p class="camp-location">📍 Unit training location • Andhra Pradesh</p></div>
+            <div class="camp-facts"><div><span>DATES</span><b>To be announced</b></div><div><span>DURATION</span><b>10 days</b></div><div><span>ELIGIBILITY</span><b>Enrolled cadets</b></div></div>
+          </div>
+
+
+<div class="camp-body">
+            <div><h3>EK BHARAT SHRESHTHA BHARAT (EBSB) CAMP</h3><p class="camp-location">📍 Unit training location • Andhra Pradesh</p></div>
+            <div class="camp-facts"><div><span>DATES</span><b>To be announced</b></div><div><span>DURATION</span><b>10 days</b></div><div><span>ELIGIBILITY</span><b>Enrolled cadets</b></div></div>
+          </div>
+
+<div class="camp-body">
+            <div><h3>INTER-GROUP COMPETITION (IGC)</h3><p class="camp-location">📍 Unit training location • DELHI</p></div>
+            <div class="camp-facts"><div><span>DATES</span><b>To be announced</b></div><div><span>DURATION</span><b>10 days</b></div><div><span>ELIGIBILITY</span><b>Enrolled cadets</b></div></div>
+          </div>
+
+
+<div class="camp-body">
+            <div><h3>Annual Training Camp</h3><p class="camp-location">📍 Unit training location • Andhra Pradesh</p></div>
+            <div class="camp-facts"><div><span>DATES</span><b>To be announced</b></div><div><span>DURATION</span><b>10 days</b></div><div><span>ELIGIBILITY</span><b>Enrolled cadets</b></div></div>
+          </div></div>
+
+
+
+          <div class="camp-bottom"><p><strong>Typical activities:</strong> Drill • Physical training • Map reading • First aid • Team tasks • Cultural programmes • Community service</p><button class="btn btn-light" data-modal="camp">View camp checklist →</button></div>
+        </div>
+</div>
+
+
+
+
+
+
+        <div class="camp-notes">
+          <div><span>01</span><h3>Bring the essentials</h3><p>Uniforms, footwear, ID documents, stationery, personal hygiene items and prescribed kit.</p></div>
+          <div><span>02</span><h3>Follow unit instructions</h3><p>Arrival, medical, permission and documentation requirements are communicated by the responsible unit.</p></div>
+          <div><span>03</span><h3>Stay camp-ready</h3><p>Maintain fitness, hydration, punctuality and a positive team attitude throughout training.</p></div>
+        </div>
+      </div>
+    </section>
+
+
+    <section class="section media-section" id="videos">
+      <div class="container">
+        <div class="section-heading split reveal"><div><p class="eyebrow">05 / Videos</p><h2>See training<br><em>in motion.</em></h2></div><p>A curated-style gallery for parade footage, training explainers, interviews and cadet stories.</p></div>
+        <div class="media-grid">
+          <article class="media-card large reveal"><div class="media-image" style="background-image:url('https://images.unsplash.com/photo-1574680096145-d05b474e2155?auto=format&fit=crop&w=1200&q=80')"><button class="play" aria-label="Play parade training video" data-video="Parade & Drill Training">▶</button></div><div class="media-info"><span>TRAINING</span><h3>Parade & Drill Training</h3><p>Formation, coordination and movement.</p></div></article>
+          <article class="media-card reveal"><div class="media-image" style="background-image:url('assets/1.jpg')"><button class="play" aria-label="Play leadership video" data-video="Leadership in the Unit">▶</button></div><div class="media-info"><span>LEADERSHIP</span><h3>Leadership in the Unit</h3><p>Lessons from teamwork and responsibility.</p></div></article>
+          <article class="media-card reveal"><div class="media-image" style="background-image:url('https://images.unsplash.com/photo-1529156069898-49953e39b3ac?auto=format&fit=crop&w=800&q=80')"><button class="play" aria-label="Play cadet experience video" data-video="Cadet Experience">▶</button></div><div class="media-info"><span>STORIES</span><h3>Cadet Experience</h3><p>Training, friendship and growth.</p></div></article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section gallery-section" id="gallery">
+      <div class="container">
+        <div class="section-heading split light reveal"><div><p class="eyebrow">07 / Gallery</p><h2>Moments that<br><em>stay with you.</em></h2></div><p>Explore visual highlights from camps, training, events and cadet life.</p></div>
+        <div class="gallery-grid">
+          <button class="gallery-item g1 reveal" data-full="assets/2.jpg" aria-label="Open gallery image 1"><span>CAMP LIFE</span></button>
+          <button class="gallery-item g2 reveal" data-full="assets/5.jpg" aria-label="Open gallery image 2"><span>TEAMWORK</span></button>
+          <button class="gallery-item g3 reveal" data-full="assets/3.jpg" aria-label="Open gallery image 3"><span>TRAINING</span></button>
+          <button class="gallery-item g4 reveal" data-full="assets/6.jpg" aria-label="Open gallery image 4"><span>COMMUNITY</span></button>
+          <button class="gallery-item g5 reveal" data-full="assets/Backgroundoo.png" aria-label="Open gallery image 5"><span>EVENTS</span></button>
+        </div>
+      </div>
+    </section>
+
+    <section class="final-cta">
+      <div class="container final-cta-inner reveal">
+        <div>
+          <p class="eyebrow">Ready for the next parade?</p>
+          <h2>Put your training<br><em>into action.</em></h2>
+        </div>
+        <div class="final-cta-copy">
+          <p>Explore the resources, understand the camp journey and stay connected with your NCC community.</p>
+          <a class="btn btn-primary" href="#resources">Explore the platform <span>↗</span></a>
+        </div>
+      </div>
+    </section>
+
+
+
+<!-- =========================================
+     NCC DIGITAL HUB — CONTACT SECTION
+========================================= -->
+<section class="section ncc-contact" id="contact">
+  <div class="container">
+
+    <div class="contact-heading">
+      <p class="eyebrow">NCC DIGITAL HUB / CONTACT</p>
+      <h2>Have a question?<br><em>We're here to help.</em></h2>
+      <p>
+        Contact us for NCC website enquiries, resource suggestions,
+        camp information, corrections or feedback. Complete the form
+        and your message will be sent to our contact email.
+      </p>
+    </div>
+
+    <div class="contact-layout">
+
+      <!-- Contact information -->
+      <aside class="contact-info">
+        <span class="contact-mark" aria-hidden="true">NCC</span>
+        <p class="eyebrow">GET IN TOUCH</p>
+        <h3>Let's connect.</h3>
+        <p class="contact-info-text">
+          Have feedback about the NCC Digital Hub? Let us know how
+          we can improve the information and resources on this website.
+        </p>
+
+        <div class="contact-detail">
+          <span class="contact-detail-icon" aria-hidden="true">✉</span>
+          <div>
+            <strong>Email enquiries</strong>
+            <p>Send your question using the contact form.</p>
+          </div>
+        </div>
+
+        <div class="contact-detail">
+          <span class="contact-detail-icon" aria-hidden="true">◷</span>
+          <div>
+            <strong>Response time</strong>
+            <p>Replies depend on availability.</p>
+          </div>
+        </div>
+
+        <div class="contact-note">
+          <strong>Please note</strong>
+          <p>
+            NCC Digital Hub is an informational website. Do not submit
+            passwords, identity documents, confidential military details
+            or other sensitive personal information.
+          </p>
+        </div>
+      </aside>
+
+      <!-- Contact form -->
+      <div class="contact-form-panel">
+        <div class="contact-form-title">
+          <p class="eyebrow">SEND A MESSAGE</p>
+          <h3>Contact form</h3>
+          <p>Fields marked * are required.</p>
+        </div>
+
+        <form
+  action="https://formspree.io/f/xwlvqndv"
+  method="POST"
+>
+          <input
+            type="hidden"
+            name="_subject"
+            value="New enquiry from NCC Digital Hub"
+          >
+
+          <div class="contact-form-grid">
+
+            <div class="contact-field">
+              <label for="contact-name">Full name *</label>
+              <input
+                type="text"
+                id="contact-name"
+                name="name"
+                placeholder="Enter your full name"
+                autocomplete="name"
+                maxlength="100"
+                required
+              >
+            </div>
+
+            <div class="contact-field">
+             <label for="email">Your Email</label>
+<input
+  type="email"
+  id="email"
+  name="email"
+  placeholder="Enter your email address"
+  required
+>
+            </div>
+
+            <div class="contact-field contact-field-full">
+              <label for="contact-topic">Enquiry type *</label>
+              <select id="contact-topic" name="enquiry_type" required>
+                <option value="">Select an enquiry type</option>
+                <option value="General enquiry">General enquiry</option>
+                <option value="NCC resources">NCC resources</option>
+                <option value="Camp information">Camp information</option>
+                <option value="Website feedback">Website feedback</option>
+                <option value="Correction or suggestion">Correction or suggestion</option>
+                <option value="Other">Other</option>
+              </select>
+            </div>
+
+            <div class="contact-field contact-field-full">
+              <label for="contact-subject">Subject *</label>
+              <input
+                type="text"
+                id="contact-subject"
+                name="message_subject"
+                placeholder="What is your enquiry about?"
+                maxlength="150"
+                required
+              >
+            </div>
+
+            <div class="contact-field contact-field-full">
+              <label for="contact-message">Your message *</label>
+              <textarea
+                id="contact-message"
+                name="message"
+                rows="6"
+                placeholder="Write your question, feedback or suggestion..."
+                minlength="10"
+                maxlength="5000"
+                required
+              ></textarea>
+              <span class="contact-helper">
+                Please do not include sensitive personal information.
+              </span>
+            </div>
+
+          </div>
+
+          <!-- Honeypot spam protection -->
+          <div class="contact-honeypot" aria-hidden="true">
+            <label for="contact-website">Leave this field empty</label>
+            <input
+              type="text"
+              id="contact-website"
+              name="_gotcha"
+              tabindex="-1"
+              autocomplete="off"
+            >
+          </div>
+
+          <button class="contact-submit" type="submit">
+            Send Message <span aria-hidden="true">↗</span>
+          </button>
+
+          <p class="contact-privacy">
+            By submitting this form, you agree to have your message
+            processed to respond to your enquiry.
+          </p>
+        </form>
+      </div>
+
+    </div>
+  </div>
+</section>
+<!-- END CONTACT SECTION -->
+  </main>
+
+  <footer class="footer">
+    <div class="container footer-grid">
+      <div> DONE BY
+        <h3>29 A bt{Mohan Babu University}</h3>
+      </div>
+      <div><h3>Explore</h3><a href="#about">About NCC</a><a href="#identity">Identity &amp; Uniform</a><a href="#resources">Resources</a><a href="#camps">Camps</a><a href="#achievements">Achievements</a></div>
+      <div><h3>Media</h3><a href="#videos">Videos</a><a href="#gallery">Gallery</a><a href="#contact">Contact</a></div>
+      <div><h3>Official links</h3><a href="https://indiancc.mygov.in/" target="_blank" rel="noopener">NCC Directorate</a><a href="https://www.mod.gov.in/" target="_blank" rel="noopener">Ministry of Defence</a><p class="footer-note">Replace sample contact details with your institution/unit details before publishing.</p></div>
+    </div>
+    <div class="container footer-bottom"><span>© 2026 NCC Digital Hub </span><a href="#top">Back to top ↑</a></div>
+  </footer>
+
+  <div class="modal" id="modal" aria-hidden="true" role="dialog" aria-modal="true" aria-labelledby="modal-title">
+    <div class="modal-backdrop" data-close></div>
+    <div class="modal-box">
+      <button class="modal-close" type="button" aria-label="Close" data-close>×</button>
+      <p class="eyebrow">NCC DIGITAL HUB</p><h2 id="modal-title">Information</h2><div id="modal-content"></div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
