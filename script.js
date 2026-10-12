@@ -306,7 +306,7 @@ $('#contact-form')?.addEventListener('submit', e => {
 
 /* Opens the Map reading PDF (used by the resource cover images) */
 function openPDF1() {
-    window.open("assets/Map.pdf", "_blank");
+    window.open("Map.pdf", "_blank");
 }
 const showButton = document.getElementById("showImagesBtn");
 const imageContainer = document.getElementById("imageContainer");
