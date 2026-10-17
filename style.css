@@ -2205,3 +2205,309 @@ html[data-theme="dark"] .wings-note {
   }
 }
 ```
+
+
+/* =========================================
+   JOIN NCC SECTION - SCREENSHOT DESIGN
+========================================= */
+
+.join-layout {
+  display: grid;
+  grid-template-columns: 1.2fr 0.8fr;
+  gap: 46px;
+  align-items: stretch;
+}
+
+/* Enrollment steps */
+.join-steps {
+  display: grid;
+  gap: 0;
+}
+
+.join-steps article {
+  display: flex;
+  align-items: flex-start;
+  gap: 23px;
+  padding: 22px 0;
+  border-bottom: 1px solid var(--line);
+}
+
+.join-steps article:first-child {
+  padding-top: 10px;
+}
+
+.join-steps article > span {
+  width: 43px;
+  height: 43px;
+  flex: 0 0 43px;
+  display: grid;
+  place-items: center;
+  border: 1px solid var(--lime);
+  color: var(--lime);
+  background: transparent;
+  font-size: 17px;
+  font-weight: 800;
+}
+
+.join-steps article > div {
+  flex: 1;
+  min-width: 0;
+}
+
+.join-steps h3 {
+  margin: 0 0 6px;
+  color: var(--text);
+  font-size: 17px;
+  font-weight: 800;
+  line-height: 1.4;
+}
+
+.join-steps p {
+  margin: 0;
+  color: var(--muted);
+  font-size: 14px;
+  line-height: 1.75;
+}
+
+/* Before you apply card */
+.join-aside {
+  position: relative;
+  padding: 42px 37px;
+  background: #194d37;
+  color: #ffffff;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.aside-icon {
+  color: var(--lime);
+  font-size: 30px;
+  margin-bottom: 17px;
+  line-height: 1;
+}
+
+.join-aside h3 {
+  color: #ffffff;
+  font-size: 27px;
+  font-weight: 800;
+  line-height: 1.3;
+  margin: 0 0 19px;
+}
+
+.join-aside ul {
+  padding-left: 20px;
+  margin: 0 0 23px;
+  color: #e1eee5;
+  font-size: 13px;
+  line-height: 2.15;
+}
+
+.join-aside li {
+  padding-left: 1px;
+  margin-bottom: 1px;
+}
+
+.small-muted {
+  color: #c1d7c9;
+  font-size: 11px;
+  line-height: 1.7;
+  margin: 0 0 28px;
+}
+
+/* Official NCC portal button */
+.join-aside .btn {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+  margin-top: 0;
+  padding: 16px 22px;
+  background: var(--lime);
+  color: #183724;
+  border: 1px solid var(--lime);
+  border-radius: 3px;
+  font-size: 12px;
+  font-weight: 800;
+  text-decoration: none;
+  transition: background 0.25s ease,
+              transform 0.25s ease;
+}
+
+.join-aside .btn:hover {
+  background: #d8eaa9;
+  transform: translateY(-3px);
+}
+
+/* Dark theme */
+body.dark .join-steps h3 {
+  color: var(--text);
+}
+
+body.dark .join-aside {
+  background: #194d37;
+  color: #ffffff;
+}
+
+body.dark .join-aside h3 {
+  color: #ffffff;
+}
+
+/* Tablet and mobile */
+@media (max-width: 760px) {
+  .join-layout {
+    grid-template-columns: 1fr;
+    gap: 30px;
+  }
+
+  .join-steps article {
+    gap: 16px;
+    padding: 20px 0;
+  }
+
+  .join-steps article > span {
+    width: 38px;
+    height: 38px;
+    flex-basis: 38px;
+    font-size: 15px;
+  }
+
+  .join-steps h3 {
+    font-size: 16px;
+  }
+
+  .join-steps p {
+    font-size: 13px;
+  }
+
+  .join-aside {
+    padding: 30px 24px;
+  }
+
+  .join-aside h3 {
+    font-size: 24px;
+  }
+}
+
+
+/* FREQUENTLY ASKED QUESTIONS */
+.faq-list {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+}
+
+.faq-list details {
+  border: 1px solid var(--line);
+  background: var(--surface);
+  padding: 16px 18px;
+  border-radius: 4px;
+  transition: border-color 0.2s ease;
+}
+
+.faq-list details:hover {
+  border-color: var(--green2);
+}
+
+.faq-list summary {
+  cursor: pointer;
+  font-size: 13px;
+  font-weight: 800;
+  list-style: none;
+  display: flex;
+  justify-content: space-between;
+  gap: 12px;
+}
+
+.faq-list summary::-webkit-details-marker {
+  display: none;
+}
+
+.faq-list summary::after {
+  content: "+";
+  color: var(--green2);
+  font-size: 18px;
+  line-height: 1;
+}
+
+.faq-list details[open] summary::after {
+  content: "−";
+}
+
+.faq-list p {
+  font-size: 12px;
+  color: var(--muted);
+  margin: 12px 0 0;
+  line-height: 1.8;
+}
+
+/* Mobile responsive */
+@media (max-width: 760px) {
+  .faq-list {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Dark theme */
+body.dark .faq-list details {
+  background: var(--surface);
+  border-color: var(--line);
+}
+
+body.dark .faq-list summary {
+  color: var(--text);
+}
+
+
+/* FIX: Keep Join NCC steps and green box side by side */
+
+#join-ncc .join-layout,
+#join .join-layout {
+  display: grid !important;
+  grid-template-columns: minmax(0, 1.2fr) minmax(320px, 0.8fr) !important;
+  gap: 46px;
+  align-items: stretch;
+  width: 100%;
+}
+
+#join-ncc .join-steps,
+#join .join-steps {
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+}
+
+#join-ncc .join-aside,
+#join .join-aside {
+  display: flex;
+  flex-direction: column;
+  align-self: stretch;
+  min-width: 0;
+  box-sizing: border-box;
+  padding: 42px 37px;
+  background: #194d37;
+  color: #ffffff;
+}
+
+/* Keep the five steps on the left */
+#join-ncc .join-steps article,
+#join .join-steps article {
+  display: flex;
+  align-items: flex-start;
+  gap: 22px;
+  width: 100%;
+}
+
+/* Responsive layout for phones and small screens */
+@media (max-width: 760px) {
+  #join-ncc .join-layout,
+  #join .join-layout {
+    grid-template-columns: minmax(0, 1fr) !important;
+    gap: 28px;
+  }
+
+  #join-ncc .join-aside,
+  #join .join-aside {
+    padding: 28px 22px;
+  }
+}
