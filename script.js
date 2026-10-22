@@ -221,9 +221,9 @@ $('#contact-form')?.addEventListener('submit', e => {
 });
 
 function openPDF1() {
-    window.open("assets/Map.pdf", "_blank");
+    window.open("Map.pdf", "_blank");
 }
-```javascript
+
 /* =================================
    NCC WING INFORMATION TOGGLE
 ================================= */
@@ -251,7 +251,7 @@ function toggleWingInfo(infoId, button) {
     ? "Close " + wingName + " information <span>−</span>"
     : "Explore " + wingName + " <span>＋</span>";
 }
-```
+
 
 /* NCC FAQ accordion */
 
