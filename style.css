@@ -188,7 +188,7 @@ html[data-theme="dark"] .hero-media{
   background:
     linear-gradient(90deg,rgba(6,12,9,.6) 0%,rgba(6,12,9,.93) 37%,rgba(6,12,9,.4) 65%,rgba(6,12,9,.8) 100%),
     linear-gradient(0deg,rgba(6,12,9,.78),transparent 42%),
-    url('assets/Backgroundoo.png') center/cover;
+    url('Backgroundoo.png') center/cover;
 }
 .hero-media:after{content:"";position:absolute;inset:0;background:radial-gradient(circle at 78% 38%,rgba(201,168,76,.15),transparent 26%)}
 .hero-grid{position:relative;z-index:2;display:grid;grid-template-columns:1.18fr .52fr;gap:80px;align-items:center}
